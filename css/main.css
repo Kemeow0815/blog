@@ -260,6 +260,434 @@
     height: 100px;
   }
 }
+#about-page {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.author-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  user-select: none;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.mainports {
+  margin: 0 20px;
+}
+.author-box {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: var(--card);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+}
+.author-img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  position: relative;
+  background: var(--block);
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+.author-img:hover {
+  transform: scale(1.02);
+}
+.author-avatar {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.author-tag-left,
+.author-tag-right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.author-tag-left {
+  align-items: flex-end;
+}
+.author-tag-left .author-tag:first-child,
+.author-tag-left .author-tag:last-child {
+  margin-right: -16px;
+}
+.author-tag-right {
+  align-items: flex-start;
+}
+.author-tag {
+  padding: 4px 12px;
+  background: var(--card);
+  border: 1px solid var(--block-border);
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-p1);
+  box-shadow: var(--shadow-card);
+  animation: tag-float 6s ease-in-out infinite;
+  will-change: transform, opacity;
+  white-space: nowrap;
+}
+.author-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.author-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5rem;
+}
+.author-content-item {
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--block-border);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  flex: 1;
+  min-width: 280px;
+}
+@media screen and (min-width: 1300px) {
+  .author-content-item {
+    animation: slide-in 0.6s 0s backwards;
+  }
+}
+.author-content-item-tips {
+  opacity: 0.8;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+  color: var(--text-p2);
+}
+.author-content-item-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: var(--text-p1);
+  font-weight: 600;
+}
+.author-content-item-content {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  color: var(--text-p2);
+  line-height: 1.6;
+}
+.myInfoAndSayHello {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(120deg, #5b27ff 0%, #00d4ff 100%);
+  background-size: 200%;
+  min-height: 175px;
+}
+.myInfoAndSayHello .title1 {
+  opacity: 0.8;
+  line-height: 1.3;
+  font-size: 1rem;
+}
+.myInfoAndSayHello .title2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0.5rem 0;
+}
+.myInfoAndSayHello .inline-word {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.aboutsiteTips {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 3;
+}
+.aboutsiteTips h2 {
+  margin-right: auto;
+  font-size: 36px;
+  font-family: Helvetica, system-ui, sans-serif;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--text-p1);
+  margin-top: 0;
+  font-weight: 600;
+}
+.aboutsiteTips .mask {
+  height: 36px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.aboutsiteTips .mask span {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  padding-bottom: var(--offset, 0);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  font-size: 36px;
+  font-weight: 600;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+.aboutsiteTips .mask span:nth-child(1) {
+  background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+}
+.aboutsiteTips .mask span:nth-child(2) {
+  background-image: linear-gradient(45deg, #18e198 50%, #0ec15d);
+}
+.aboutsiteTips .mask span:nth-child(3) {
+  background-image: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
+}
+.aboutsiteTips .mask span:nth-child(4) {
+  background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
+}
+.aboutsiteTips .mask span[data-show] {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+.aboutsiteTips .mask span[data-up] {
+  transform: translateY(-200%);
+  transition: transform 0.5s ease-in-out;
+}
+.aboutsiteTips .mask span[data-wait] {
+  transform: translateY(0);
+  opacity: 0;
+}
+.maxim {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 200px;
+}
+creativityMain {
+  width: 100%;
+}
+.author-content-item-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cardInfo {
+  display: flex;
+  align-items: center;
+}
+.skill-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 0.75rem;
+  background: var(--block);
+  border: 1px solid var(--block-border);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.skill-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--theme-a30);
+}
+.skill-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.skill-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-p1);
+}
+.single {
+  width: 100%;
+}
+.single .lishi {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--text-p1);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.single .singlePost {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--block-border);
+}
+.single .singlePost .text-center {
+  text-align: center;
+  color: var(--text-p3);
+  font-style: italic;
+}
+@media screen and (max-width: 768px) {
+  #about-page {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .author-main {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .author-tag-left,
+  .author-tag-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .author-tag-left .author-tag:first-child,
+  .author-tag-right .author-tag:first-child,
+  .author-tag-left .author-tag:last-child,
+  .author-tag-right .author-tag:last-child {
+    margin-right: 0;
+  }
+  .author-content {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .author-content-item {
+    width: 100% !important;
+    padding: 1rem;
+    min-width: auto;
+  }
+  .myInfoAndSayHello .title2 {
+    font-size: 28px;
+  }
+  .aboutsiteTips h2 {
+    font-size: 28px;
+  }
+  .aboutsiteTips .mask {
+    height: 28px;
+  }
+  .aboutsiteTips .mask span {
+    font-size: 28px;
+  }
+  .author-tag {
+    animation-duration: 4s;
+  }
+}
+@media screen and (max-width: 480px) {
+  .author-box {
+    width: 140px;
+    height: 140px;
+  }
+  .author-img {
+    width: 140px;
+    height: 140px;
+  }
+  .author-avatar {
+    width: 140px;
+    height: 140px;
+  }
+  .myInfoAndSayHello .title2 {
+    font-size: 24px;
+  }
+  .aboutsiteTips h2 {
+    font-size: 24px;
+  }
+  .aboutsiteTips .mask {
+    height: 24px;
+  }
+  .aboutsiteTips .mask span {
+    font-size: 24px;
+  }
+}
+@-moz-keyframes tag-float {
+  0%, 100% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes tag-float {
+  0%, 100% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 0.8;
+  }
+}
+@-o-keyframes tag-float {
+  0%, 100% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 0.8;
+  }
+}
+@keyframes tag-float {
+  0%, 100% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 0.8;
+  }
+}
+@-moz-keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-o-keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 :root {
   --hue: 192deg;
   --sat: 98%;
@@ -7622,6 +8050,352 @@ details.toc[open] >div.body section .header+.doc_tree {
     background: var(--bg-a20);
   }
 }
+.widget-wrapper.calendar-schedule .widget-body,
+.widget-wrapper.calendar-main .widget-body {
+  padding: 0.5rem;
+  overflow: hidden;
+}
+#card-widget-schedule {
+  display: flex;
+  gap: 8px;
+}
+#card-widget-schedule #schedule-area-left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#card-widget-schedule #schedule-area-left #schedule-title {
+  font-size: 12px;
+  color: var(--text-p3);
+  margin-bottom: 4px;
+}
+#card-widget-schedule #schedule-area-left #schedule-days {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--theme);
+  line-height: 1;
+}
+#card-widget-schedule #schedule-area-left #schedule-date {
+  font-size: 11px;
+  color: var(--text-p3);
+  margin-top: 4px;
+}
+#card-widget-schedule #schedule-area-right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#card-widget-schedule #schedule-area-right .schedule-r0,
+#card-widget-schedule #schedule-area-right .schedule-r1,
+#card-widget-schedule #schedule-area-right .schedule-r2 {
+  display: flex;
+  align-items: center;
+  height: 1.8rem;
+}
+#card-widget-schedule #schedule-area-right .schedule-r0 .schedule-d0,
+#card-widget-schedule #schedule-area-right .schedule-r1 .schedule-d0,
+#card-widget-schedule #schedule-area-right .schedule-r2 .schedule-d0 {
+  width: 32px;
+  font-size: 11px;
+  color: var(--text-p3);
+  text-align: center;
+}
+#card-widget-schedule #schedule-area-right .schedule-r0 .schedule-d1,
+#card-widget-schedule #schedule-area-right .schedule-r1 .schedule-d1,
+#card-widget-schedule #schedule-area-right .schedule-r2 .schedule-d1 {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#card-widget-schedule #schedule-area-right .schedule-r0 .schedule-d1 progress,
+#card-widget-schedule #schedule-area-right .schedule-r1 .schedule-d1 progress,
+#card-widget-schedule #schedule-area-right .schedule-r2 .schedule-d1 progress {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--block);
+}
+#card-widget-schedule #schedule-area-right .schedule-r0 .schedule-d1 progress::-webkit-progress-bar,
+#card-widget-schedule #schedule-area-right .schedule-r1 .schedule-d1 progress::-webkit-progress-bar,
+#card-widget-schedule #schedule-area-right .schedule-r2 .schedule-d1 progress::-webkit-progress-bar {
+  background: var(--block);
+}
+#card-widget-schedule #schedule-area-right .schedule-r0 .schedule-d1 progress::-webkit-progress-value,
+#card-widget-schedule #schedule-area-right .schedule-r1 .schedule-d1 progress::-webkit-progress-value,
+#card-widget-schedule #schedule-area-right .schedule-r2 .schedule-d1 progress::-webkit-progress-value {
+  background: var(--theme);
+  border-radius: 3px;
+}
+#card-widget-schedule #schedule-area-right .schedule-r0 .schedule-d1 .aside-span1,
+#card-widget-schedule #schedule-area-right .schedule-r1 .schedule-d1 .aside-span1,
+#card-widget-schedule #schedule-area-right .schedule-r2 .schedule-d1 .aside-span1 {
+  position: absolute;
+  left: 4px;
+  font-size: 10px;
+  color: var(--card);
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+#card-widget-schedule #schedule-area-right .schedule-r0 .schedule-d1 .aside-span2,
+#card-widget-schedule #schedule-area-right .schedule-r1 .schedule-d1 .aside-span2,
+#card-widget-schedule #schedule-area-right .schedule-r2 .schedule-d1 .aside-span2 {
+  position: absolute;
+  right: 0;
+  font-size: 10px;
+  color: var(--text-p2);
+}
+#card-widget-schedule #schedule-area-right .schedule-r0 .schedule-d1 .aside-span2 a,
+#card-widget-schedule #schedule-area-right .schedule-r1 .schedule-d1 .aside-span2 a,
+#card-widget-schedule #schedule-area-right .schedule-r2 .schedule-d1 .aside-span2 a {
+  color: var(--text-p1);
+  font-weight: 600;
+}
+#card-widget-calendar {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  position: relative;
+}
+#card-widget-calendar #calendar-area-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 4px;
+  position: relative;
+}
+#card-widget-calendar #calendar-area-left #calendar-week {
+  font-size: 12px;
+  color: var(--text-p3);
+  line-height: 1.4;
+  margin-bottom: 4px;
+  position: relative;
+  height: auto;
+}
+#card-widget-calendar #calendar-area-left #calendar-date {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--theme);
+  line-height: 1;
+  margin: 4px 0;
+  position: relative;
+  height: auto;
+  top: auto;
+  display: block;
+}
+#card-widget-calendar #calendar-area-left #calendar-solar {
+  font-size: 10px;
+  color: var(--text-p2);
+  line-height: 1.4;
+  margin-top: 4px;
+  position: relative;
+  height: auto;
+  bottom: auto;
+  display: block;
+}
+#card-widget-calendar #calendar-area-left #calendar-lunar {
+  font-size: 10px;
+  color: var(--text-p3);
+  line-height: 1.4;
+  margin-top: 2px;
+  position: relative;
+  height: auto;
+  bottom: auto;
+  display: block;
+}
+#card-widget-calendar #calendar-area-right {
+  width: 60%;
+  display: flex;
+  align-items: flex-start;
+}
+#card-widget-calendar #calendar-area-right #calendar-main {
+  width: 100%;
+}
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-rh {
+  display: flex;
+  margin-bottom: 2px;
+}
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-rh .calendar-d0,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-rh .calendar-d1,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-rh .calendar-d2,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-rh .calendar-d3,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-rh .calendar-d4,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-rh .calendar-d5,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-rh .calendar-d6 {
+  flex: 1;
+  text-align: center;
+  font-size: 9px;
+  color: var(--text-p3);
+  padding: 1px 0;
+}
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 {
+  display: flex;
+  height: 18px;
+}
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d0,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d0,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d0,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d0,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d0,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d0,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d1,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d1,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d1,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d1,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d1,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d1,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d2,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d2,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d2,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d2,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d2,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d2,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d3,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d3,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d3,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d3,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d3,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d3,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d4,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d4,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d4,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d4,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d4,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d4,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d5,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d5,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d5,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d5,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d5,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d5,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d6,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d6,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d6,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d6,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d6,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d6 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d0 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d0 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d0 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d0 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d0 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d0 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d1 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d1 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d1 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d1 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d1 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d1 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d2 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d2 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d2 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d2 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d2 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d2 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d3 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d3 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d3 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d3 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d3 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d3 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d4 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d4 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d4 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d4 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d4 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d4 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d5 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d5 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d5 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d5 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d5 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d5 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d6 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d6 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d6 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d6 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d6 a,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d6 a {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: var(--text-p1);
+  border-radius: 50%;
+  text-decoration: none;
+}
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d0 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d0 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d0 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d0 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d0 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d0 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d1 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d1 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d1 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d1 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d1 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d1 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d2 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d2 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d2 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d2 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d2 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d2 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d3 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d3 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d3 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d3 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d3 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d3 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d4 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d4 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d4 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d4 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d4 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d4 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d5 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d5 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d5 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d5 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d5 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d5 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r0 .calendar-d6 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r1 .calendar-d6 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r2 .calendar-d6 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r3 .calendar-d6 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r4 .calendar-d6 a.now,
+#card-widget-calendar #calendar-area-right #calendar-main .calendar-r5 .calendar-d6 a.now {
+  background: var(--theme);
+  color: var(--card);
+  font-weight: 600;
+}
+.l_left .widget-wrapper.calendar-schedule .widget-body,
+.l_left .widget-wrapper.calendar-main .widget-body {
+  background: var(--bg-a50);
+  border-radius: 12px;
+}
 .widget-body .linklist {
   display: grid;
   grid-gap: 8px;
@@ -7931,6 +8705,139 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .l_right .widget-wrapper.markdown .linklist .link:hover {
   background: var(--theme-a20);
+}
+.widget-wrapper.moment .tag-plugin.timeline {
+  padding-left: 0;
+}
+.widget-wrapper.moment .tag-plugin.timeline:before {
+  left: 6px;
+}
+.widget-wrapper.moment .widget-body {
+  overflow: hidden;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.widget-wrapper.moment .widget-body::-webkit-scrollbar {
+  width: 4px;
+}
+.widget-wrapper.moment .widget-body::-webkit-scrollbar-thumb {
+  background: var(--text-meta);
+  border-radius: 4px;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode {
+  z-index: 1;
+  margin-top: 0.5rem;
+  position: relative;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode:before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--theme);
+  z-index: 2;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode:after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 20px;
+  bottom: -8px;
+  width: 2px;
+  background: var(--block-border);
+  z-index: 1;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode:last-child:after {
+  display: none;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .header {
+  margin: 0 0 0.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-p3);
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .header .time {
+  font-weight: 500;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .header .views {
+  opacity: 0.8;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .body {
+  margin-left: 1.5rem;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  background: var(--block);
+  border: 1px solid var(--block-border);
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .body .content {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-p1);
+  word-break: break-word;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .body .content .emoji {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .body .content .emoji b {
+  display: none;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-top: 0.5rem;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .images .image-item {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .images .image-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .images .image-item a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .images .image-item a:hover img {
+  transform: scale(1.05);
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .images.empty,
+.widget-wrapper.moment .tag-plugin.timeline .timenode .images.error {
+  text-align: center;
+  color: var(--text-p3);
+  padding: 1rem;
+}
+.widget-wrapper.moment .tag-plugin.timeline .timenode .images.empty p,
+.widget-wrapper.moment .tag-plugin.timeline .timenode .images.error p {
+  margin: 0;
+}
+.l_left .widget-wrapper.moment .tag-plugin.timeline {
+  padding-left: 0;
+}
+.l_left .widget-wrapper.moment .tag-plugin.timeline:before {
+  content: none;
+}
+.l_left .widget-wrapper.moment .timenode .body {
+  box-shadow: none;
+  background: var(--bg-a50);
 }
 .widget-wrapper.post-card .widget-body {
   max-width: 100%;
@@ -8295,6 +9202,27 @@ details.toc[open] >div.body section .header+.doc_tree {
   .widget-wrapper.toc .widget-footer a+a {
     margin-top: 4px;
   }
+}
+.widget-wrapper.welcome .widget-body {
+  padding: 0.5rem 1rem;
+}
+.widget-wrapper.welcome .widget-body #welcome-info {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: var(--text-p1);
+}
+.widget-wrapper.welcome .widget-body #welcome-info b {
+  font-weight: 600;
+}
+.widget-wrapper.welcome .widget-body #welcome-info span {
+  color: var(--theme);
+}
+.widget-wrapper.welcome .widget-body #welcome-info br {
+  margin-bottom: 0.25rem;
+}
+.l_left .widget-wrapper.welcome .widget-body {
+  background: var(--bg-a50);
+  border-radius: 12px;
 }
 .widgets .loading-wrap {
   margin: 0.5rem 0;
