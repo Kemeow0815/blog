@@ -262,10 +262,10 @@
 }
 #about-page {
   margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
-  width: calc(100% - 2rem);
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -557,9 +557,9 @@ creativityMain {
 }
 @media screen and (max-width: 768px) {
   #about-page {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: calc(100vw - 1rem);
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
   }
   .author-main {
     flex-direction: column;
@@ -628,9 +628,9 @@ creativityMain {
 }
 @media screen and (max-width: 480px) {
   #about-page {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: calc(100vw - 1rem);
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
   }
   .author-box {
     width: 140px;
@@ -3428,6 +3428,8 @@ div.toast.show {
 }
 .page-footer .text {
   margin-top: 0.5rem;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .page-footer .text p {
   margin: 4px 0;
@@ -3435,6 +3437,27 @@ div.toast.show {
 }
 .page-footer .text a:not([class]) {
   font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .page-footer {
+    margin: 2rem 0.5rem 1.5rem;
+    max-width: calc(100% - 1rem);
+    box-sizing: border-box;
+  }
+  .page-footer hr {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .page-footer .text {
+    padding: 0 0.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .page-footer .text div {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
 }
 .navbar {
   z-index: 8;
