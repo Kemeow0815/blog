@@ -114,7 +114,7 @@
   <div class="author-page-content">
     <!-- 第一行：个人信息和问候 -->
     <div class="author-content">
-      <div class="author-content-item myInfoAndSayHello" style="text-align: center; width: 100%">
+      <div class="author-content-item myInfoAndSayHello" style="text-align: center">
         <div class="title1">Hello there!</div>
         <div class="title2">
           我是
@@ -234,7 +234,7 @@
 
     <!-- 第四行：历程 -->
     <div class="author-content">
-      <div class="author-content-item single" style="width: 100%">
+      <div class="author-content-item single">
         <div class="author-content-item-tips">历程</div>
         <div class="author-content-item-title">我的故事</div>
         <p class="author-content-item-content">记录成长的每一步</p>
@@ -255,12 +255,7 @@
 <script src="/blog/js/about-page.js"></script>
 
 
-<footer class="page-footer footnote"><hr><div class="text"><center>
-<span id="runtime_span" style="display: block; margin: 1rem 0; font-size: 14px; color: var(--text-p2); font-weight: 500; line-height: 1.6; text-align: center;">
-  🦉 正在计算运行时间... 🦉
-</span>
-</center>
-<div style="margin-top: 8px; text-align: center; max-width: 100%; overflow-wrap: break-word; word-wrap: break-word;"><span class="totalcount">共发表 7 篇Blog · </span><span class="post-count">总计 7049 字</span></div></div><script type="text/javascript">(function() {var START_DATE = Date.UTC(2024, 9, 1, 12, 0, 0);var UPDATE_INTERVAL = 1000;var SECOND = 1000;var MINUTE = SECOND * 60;var HOUR = MINUTE * 60;var DAY = HOUR * 24;var YEAR = DAY * 365;function formatNumber(num) { return num < 10 ? "0" + num : num.toString(); }function showRuntime() {try {var now = new Date();var currentTime = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds());var diff = currentTime - START_DATE;if (diff < 0) { return; }var years = Math.floor(diff / YEAR);var remainingAfterYears = diff % YEAR;var days = Math.floor(remainingAfterYears / DAY);var remainingAfterDays = remainingAfterYears % DAY;var hours = Math.floor(remainingAfterDays / HOUR);var remainingAfterHours = remainingAfterDays % HOUR;var minutes = Math.floor(remainingAfterHours / MINUTE);var seconds = Math.floor((remainingAfterHours % MINUTE) / SECOND);var runtimeSpan = document.getElementById("runtime_span");if (runtimeSpan) {runtimeSpan.innerHTML = "🦉 本站已安全运行：" + years + " 年 " + days + " 天 " + formatNumber(hours) + " 小时 " + formatNumber(minutes) + " 分钟 " + formatNumber(seconds) + " 秒 🦉";}} catch (error) {var runtimeSpan = document.getElementById("runtime_span");if (runtimeSpan) { runtimeSpan.innerHTML = "🦉 运行时间计算失败 🦉"; }}}if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", startTimer); } else { startTimer(); }function startTimer() { showRuntime(); setInterval(showRuntime, UPDATE_INTERVAL); }})();</script></footer>
+<footer class="page-footer footnote"><hr><div class="text"><div style="margin-top: 8px; text-align: center; max-width: 100%; overflow-wrap: break-word; word-wrap: break-word;"><span class="totalcount">共发表 7 篇Blog · </span><span class="post-count">总计 7049 字</span></div></div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right"><div class="widgets">
 <widget class="widget-wrapper calendar-schedule"><div class="widget-header dis-select"><span class="name">📅 时光进度</span></div><div class="widget-body fs14"><div id="card-widget-schedule"><div id="schedule-area-left"><div id="schedule-title">距离除夕</div><div id="schedule-days"></div><div id="schedule-date">2027-02-06</div></div><div id="schedule-area-right"><div class="schedule-r0"><div class="schedule-d0">本年</div><div class="schedule-d1"><span id="p_span_year" class="aside-span1"></span><span class="aside-span2">还剩<a></a>天</span><progress max="365" id="pBar_year"></progress></div></div><div class="schedule-r1"><div class="schedule-d0">本月</div><div class="schedule-d1"><span id="p_span_month" class="aside-span1"></span><span class="aside-span2">还剩<a></a>天</span><progress max="30" id="pBar_month"></progress></div></div><div class="schedule-r2"><div class="schedule-d0">本周</div><div class="schedule-d1"><span id="p_span_week" class="aside-span1"></span><span class="aside-span2">还剩<a></a>天</span><progress max="7" id="pBar_week"></progress></div></div></div></div></div></widget><widget class="widget-wrapper calendar-main"><div class="widget-header dis-select"><span class="name">🗓️ 日历</span></div><div class="widget-body fs14"><div id="card-widget-calendar"><div id="calendar-area-left"><div id="calendar-week"></div><div id="calendar-date" style="font-size: 48px;"></div><div id="calendar-solar"></div><div id="calendar-lunar"></div></div><div id="calendar-area-right"><div id="calendar-main"></div></div></div></div></widget>
 
