@@ -293,10 +293,10 @@
   })();
   const ctx = {
     date_suffix: {
-      just: `剛剛`,
-      min: `分鐘前`,
-      hour: `小時前`,
-      day: `天前`,
+      just: `Just`,
+      min: `minutes ago`,
+      hour: `hours ago`,
+      day: `days ago`,
     },
     root : `/blog/`,
     tag_plugins: {
@@ -1171,6 +1171,13 @@
   };
 </script>
 <script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
+    window.StellarPjaxConfig = {
+        selectors: ["title","#l_cover",".l_body"],
+        timeout: 10000,
+        cacheBust: true
+    };
+</script>
+<script src="/blog/js/plugins/pjax.js" defer></script><script>
   ctx.fancybox = {
     selector: `.timenode p>img`,
     css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
@@ -1252,5 +1259,5 @@
 
 
 <!-- inject -->
-<script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script><script defer src="/blog/js/custom.js"></script><script defer src="/blog/js/chinese-lunar.js"></script>
+<script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script><script defer src="/blog/js/custom.js"></script><script defer src="/blog/js/chinese-lunar.js"></script><script defer src="/blog/js/talks.js"></script>
 </div><div class="page-loading-bar"><img src="https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd"></div></body></html>
