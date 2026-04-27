@@ -50,7 +50,7 @@
 <body><div class="sitebg"><div class="siteblur"></div></div><div id="l_cover"></div><div class="l_body index" id="start" layout="undefined" type="undefined" text-indent><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
 
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/blog/about/"><div class="bg" style="opacity:0;background-image:url(https://imgbed.268682.xyz/v2/YnwZ09J.jpeg);"></div><img no-lazy class="avatar" src="https://wsrv.nl/?url=github.com%2FKemeow0815.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">喵洛阁</div><div class="sub normal cap">每一段旅行，都有终点。</div><div class="sub hover cap" style="opacity:0"> www.kemiaosw.top</div></a></div></header>
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/blog/about/"><div class="bg" style="opacity:0;background-image:url(https://imgbed.268682.xyz/v2/YnwZ09J.jpeg);"></div><img no-lazy class="avatar" src="https://wsrv.nl/?url=github.com%2FKemeow0815.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main"><img no-lazy height="40px" src="/blog/images/site.png"/ onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><div class="sub normal cap">每一段旅行，都有终点。</div><div class="sub hover cap" style="opacity:0"> www.kemiaosw.top</div></a></div></header>
 
 <div class="nav-area">
 
@@ -59,20 +59,41 @@
 <div class="widgets">
 <div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
 
-<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">🎉 欢迎 </span></div><div class="widget-body fs14"><p>本站托管于 Github pages, 可能会出现加载缓慢或丢失问题，希望开着VPN访问。<br><br><br>今日诗词:  <span id="jinrishici-sentence"> </span></p>
-<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"> </script>
+<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">🎉 欢迎 </span></div><div class="widget-body fs14"><p>本站托管于 Github pages, 可能会出现加载缓慢或丢失问题，希望开着VPN访问。<br><br><br>每日一言:  <span id="hitokoto-text"> </span><br><small id="hitokoto-from" style="opacity: 0.7;"></small></p>
+<script>
+function fetchHitokoto() {
+  fetch('https://v1.hitokoto.cn?c=d&c=h&c=j&c=a')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      const textEl = document.getElementById('hitokoto-text');
+      const fromEl = document.getElementById('hitokoto-from');
+      if(data.hitokoto) {
+        textEl.textContent = '「' + data.hitokoto + '」';
+      }
+      if(data.from || data.from_who) {
+        data.from = data.from || '';
+        data.from_who = data.from_who || '';
+        fromEl.textContent = '—— ' + (data.from_who ? data.from_who + ' ' : '') + '《' + data.from + '》';
+      }
+    })
+    .catch(function(err) {
+      console.error('一言加载失败:', err);
+    });
+}
+fetchHitokoto();
+</script>
 
 <div class="linklist center" style="grid-template-columns:repeat(1,1fr);">
 <a class="link" title="关于" href="/about/"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#ea580c" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10" opacity=".5"/><path fill="#ea580c" d="M16.807 19.011A8.46 8.46 0 0 1 12 20.5a8.46 8.46 0 0 1-4.807-1.489c-.604-.415-.862-1.205-.51-1.848C7.41 15.83 8.91 15 12 15s4.59.83 5.318 2.163c.35.643.093 1.433-.511 1.848M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/></svg><span>关于</span></div></a></div></div></widget>
 
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/blog/posts/60457/"><span class="title">Hexo Stellar 代码块美化指南</span></a><a class="item title" href="/blog/posts/41399/"><span class="title">代码块样式测试</span></a><a class="item title" href="/blog/posts/16107/"><span class="title">Hello World</span></a><a class="item title" href="/blog/posts/23062/"><span class="title">Hexo Stellar 添加全站字数统计</span></a><a class="item title" href="/blog/posts/10551/"><span class="title">Hexo Stellar 添加文章字数统计和阅读时长</span></a></div></widget>
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/blog/posts/41399/"><span class="title">代码块样式测试</span></a><a class="item title" href="/blog/posts/16107/"><span class="title">Hello World</span></a><a class="item title" href="/blog/posts/23062/"><span class="title">Hexo Stellar 添加全站字数统计</span></a><a class="item title" href="/blog/posts/12347/"><span class="title">Hexo Stellar 添加 TgTalk 说说页面</span></a><a class="item title" href="/blog/posts/59445/"><span class="title">Hexo Stellar 主题明暗模式切换功能实现指南</span></a></div></widget>
 
 <widget class="widget-wrapper tagcloud"><div class="widget-header dis-select"><span class="name">标签云</span></div><div class="widget-body fs14"><a href="/blog/tags/CSS/" style="font-size: 12px;" class="tag -0">CSS</a> <a href="/blog/tags/Hexo/" style="font-size: 24px;" class="tag -10">Hexo</a> <a href="/blog/tags/JavaScript/" style="font-size: 12px;" class="tag -0">JavaScript</a> <a href="/blog/tags/Stellar/" style="font-size: 24px;" class="tag -10">Stellar</a> <a href="/blog/tags/TgTalk/" style="font-size: 12px;" class="tag -0">TgTalk</a> <a href="/blog/tags/%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/" style="font-size: 12px;" class="tag -0">主题开发</a> <a href="/blog/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/" style="font-size: 12px;" class="tag -0">代码块</a> <a href="/blog/tags/%E4%BB%A3%E7%A0%81%E7%BE%8E%E5%8C%96/" style="font-size: 12px;" class="tag -0">代码美化</a> <a href="/blog/tags/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/" style="font-size: 18px;" class="tag -5">字数统计</a> <a href="/blog/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 12px;" class="tag -0">测试</a> <a href="/blog/tags/%E8%AF%B4%E8%AF%B4/" style="font-size: 12px;" class="tag -0">说说</a> <a href="/blog/tags/%E9%98%85%E8%AF%BB%E6%97%B6%E9%95%BF/" style="font-size: 12px;" class="tag -0">阅读时长</a></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="javaScript:void('切换主题');" rel="noopener noreferrer"><img id="ThemeToggle" src="https://upyun.thatcdn.cn/public/img/icon/Sun.png"/></a><a class="social" href="https://github.com/Kemeow0815" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/></a><a class="social" href="/blog/" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/></a><a class="social" href="/blog/" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3616429.svg"/></a><a class="social" href="/blog/about/#comments" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/></a></div></footer>
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/blog/about/"><div class="bg" style="opacity:0;background-image:url(https://imgbed.268682.xyz/v2/YnwZ09J.jpeg);"></div><img no-lazy class="avatar" src="https://wsrv.nl/?url=github.com%2FKemeow0815.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">喵洛阁</div><div class="sub normal cap">每一段旅行，都有终点。</div><div class="sub hover cap" style="opacity:0"> www.kemiaosw.top</div></a></div></header>
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/blog/about/"><div class="bg" style="opacity:0;background-image:url(https://imgbed.268682.xyz/v2/YnwZ09J.jpeg);"></div><img no-lazy class="avatar" src="https://wsrv.nl/?url=github.com%2FKemeow0815.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main"><img no-lazy height="40px" src="/blog/images/site.png"/ onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><div class="sub normal cap">每一段旅行，都有终点。</div><div class="sub hover cap" style="opacity:0"> www.kemiaosw.top</div></a></div></header>
 
  
 
