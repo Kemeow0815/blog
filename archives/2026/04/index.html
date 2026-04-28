@@ -86,7 +86,7 @@ fetchHitokoto();
 <div class="linklist center" style="grid-template-columns:repeat(1,1fr);">
 <a class="link" title="关于" href="/about/"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#ea580c" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10" opacity=".5"/><path fill="#ea580c" d="M16.807 19.011A8.46 8.46 0 0 1 12 20.5a8.46 8.46 0 0 1-4.807-1.489c-.604-.415-.862-1.205-.51-1.848C7.41 15.83 8.91 15 12 15s4.59.83 5.318 2.163c.35.643.093 1.433-.511 1.848M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/></svg><span>关于</span></div></a></div></div></widget>
 
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/blog/posts/60457/"><span class="title">Hexo Stellar 代码块美化指南</span></a><a class="item title" href="/blog/posts/16107/"><span class="title">Hello World</span></a><a class="item title" href="/blog/posts/23062/"><span class="title">Hexo Stellar 添加全站字数统计</span></a><a class="item title" href="/blog/posts/59445/"><span class="title">Hexo Stellar 主题明暗模式切换功能实现指南</span></a><a class="item title" href="/blog/posts/41399/"><span class="title">代码块样式测试</span></a></div></widget>
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/blog/posts/60457/"><span class="title">Hexo Stellar 代码块美化指南</span></a><a class="item title" href="/blog/posts/23062/"><span class="title">Hexo Stellar 添加全站字数统计</span></a><a class="item title" href="/blog/posts/16107/"><span class="title">Hello World</span></a><a class="item title" href="/blog/posts/59445/"><span class="title">Hexo Stellar 主题明暗模式切换功能实现指南</span></a><a class="item title" href="/blog/posts/12347/"><span class="title">Hexo Stellar 添加 TgTalk 说说页面</span></a></div></widget>
 
 <widget class="widget-wrapper tagcloud"><div class="widget-header dis-select"><span class="name">标签云</span></div><div class="widget-body fs14"><a href="/blog/tags/CSS/" style="font-size: 12px;" class="tag -0">CSS</a> <a href="/blog/tags/Hexo/" style="font-size: 24px;" class="tag -10">Hexo</a> <a href="/blog/tags/JavaScript/" style="font-size: 12px;" class="tag -0">JavaScript</a> <a href="/blog/tags/Stellar/" style="font-size: 24px;" class="tag -10">Stellar</a> <a href="/blog/tags/TgTalk/" style="font-size: 12px;" class="tag -0">TgTalk</a> <a href="/blog/tags/%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/" style="font-size: 12px;" class="tag -0">主题开发</a> <a href="/blog/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/" style="font-size: 12px;" class="tag -0">代码块</a> <a href="/blog/tags/%E4%BB%A3%E7%A0%81%E7%BE%8E%E5%8C%96/" style="font-size: 12px;" class="tag -0">代码美化</a> <a href="/blog/tags/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/" style="font-size: 18px;" class="tag -5">字数统计</a> <a href="/blog/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 12px;" class="tag -0">测试</a> <a href="/blog/tags/%E8%AF%B4%E8%AF%B4/" style="font-size: 12px;" class="tag -0">说说</a> <a href="/blog/tags/%E9%98%85%E8%AF%BB%E6%97%B6%E9%95%BF/" style="font-size: 12px;" class="tag -0">阅读时长</a></div></widget>
 </div>
@@ -144,10 +144,10 @@ fetchHitokoto();
   })();
   const ctx = {
     date_suffix: {
-      just: `剛剛`,
-      min: `分鐘前`,
-      hour: `小時前`,
-      day: `天前`,
+      just: `Just`,
+      min: `minutes ago`,
+      hour: `hours ago`,
+      day: `days ago`,
     },
     root : `/blog/`,
     tag_plugins: {
