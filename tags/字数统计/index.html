@@ -86,7 +86,7 @@ fetchHitokoto();
 <div class="linklist center" style="grid-template-columns:repeat(1,1fr);">
 <a class="link" title="关于" href="/about/"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#ea580c" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10" opacity=".5"/><path fill="#ea580c" d="M16.807 19.011A8.46 8.46 0 0 1 12 20.5a8.46 8.46 0 0 1-4.807-1.489c-.604-.415-.862-1.205-.51-1.848C7.41 15.83 8.91 15 12 15s4.59.83 5.318 2.163c.35.643.093 1.433-.511 1.848M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/></svg><span>关于</span></div></a></div></div></widget>
 
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/blog/posts/41399/"><span class="title">代码块样式测试</span></a><a class="item title" href="/blog/posts/16107/"><span class="title">Hello World</span></a><a class="item title" href="/blog/posts/23062/"><span class="title">Hexo Stellar 添加全站字数统计</span></a><a class="item title" href="/blog/posts/12347/"><span class="title">Hexo Stellar 添加 TgTalk 说说页面</span></a><a class="item title" href="/blog/posts/59445/"><span class="title">Hexo Stellar 主题明暗模式切换功能实现指南</span></a></div></widget>
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/blog/posts/60457/"><span class="title">Hexo Stellar 代码块美化指南</span></a><a class="item title" href="/blog/posts/16107/"><span class="title">Hello World</span></a><a class="item title" href="/blog/posts/23062/"><span class="title">Hexo Stellar 添加全站字数统计</span></a><a class="item title" href="/blog/posts/59445/"><span class="title">Hexo Stellar 主题明暗模式切换功能实现指南</span></a><a class="item title" href="/blog/posts/41399/"><span class="title">代码块样式测试</span></a></div></widget>
 
 <widget class="widget-wrapper tagcloud"><div class="widget-header dis-select"><span class="name">标签云</span></div><div class="widget-body fs14"><a href="/blog/tags/CSS/" style="font-size: 12px;" class="tag -0">CSS</a> <a href="/blog/tags/Hexo/" style="font-size: 24px;" class="tag -10">Hexo</a> <a href="/blog/tags/JavaScript/" style="font-size: 12px;" class="tag -0">JavaScript</a> <a href="/blog/tags/Stellar/" style="font-size: 24px;" class="tag -10">Stellar</a> <a href="/blog/tags/TgTalk/" style="font-size: 12px;" class="tag -0">TgTalk</a> <a href="/blog/tags/%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/" style="font-size: 12px;" class="tag -0">主题开发</a> <a href="/blog/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/" style="font-size: 12px;" class="tag -0">代码块</a> <a href="/blog/tags/%E4%BB%A3%E7%A0%81%E7%BE%8E%E5%8C%96/" style="font-size: 12px;" class="tag -0">代码美化</a> <a href="/blog/tags/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/" style="font-size: 18px;" class="tag -5">字数统计</a> <a href="/blog/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 12px;" class="tag -0">测试</a> <a href="/blog/tags/%E8%AF%B4%E8%AF%B4/" style="font-size: 12px;" class="tag -0">说说</a> <a href="/blog/tags/%E9%98%85%E8%AF%BB%E6%97%B6%E9%95%BF/" style="font-size: 12px;" class="tag -0">阅读时长</a></div></widget>
 </div>
@@ -112,8 +112,7 @@ fetchHitokoto();
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right"><div class="widgets">
 <widget class="widget-wrapper user-card ghuser"><div class="widget-body data-service ds-ghinfo" data-api="https://api.github.com/users/Kemeow0815"><div class="avatar" ><img no-lazy type="img" id="avatar_url" src="https://wsrv.nl/?url=github.com%2FKemeow0815.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><p class="username" type="text" id="name">&nbsp;</p><p class="bio" type="text" id="bio">&nbsp;</p><div class="buttons"><a class="btn" target="_blank" rel="noopener" href="https://github.com/Kemeow0815?tab=followers"><span class="title" type="text" id="followers">0</span><span class="desc">followers</span></a><a class="btn" target="_blank" rel="noopener" href="https://github.com/Kemeow0815?tab=following"><span class="title" type="text" id="following">0</span><span class="desc">following</span></a><a class="btn" target="_blank" rel="noopener" href="https://github.com/Kemeow0815?tab=repositories"><span class="title" type="text" id="public_repos">0</span><span class="desc">repos</span></a></div><a class="follow" target="_blank" rel="noopener" href="https://github.com/Kemeow0815"><svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>Follow</a></div></widget>
 
-<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name"><br></span></div><div class="widget-body fs14"><hr>
-<center>
+<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name"><br></span></div><div class="widget-body fs14"><center>
 <h4 id="免责声明"> 免责声明 </h4>
 <p> 本站提供的一切软件、教程和内容信息仅限用于学习和研究目的。</p>
 <p> 不得将上述内容用于商业或非法用途，否则一切后果自负。</p>
@@ -154,10 +153,10 @@ fetchHitokoto();
   })();
   const ctx = {
     date_suffix: {
-      just: `Just`,
-      min: `minutes ago`,
-      hour: `hours ago`,
-      day: `days ago`,
+      just: `剛剛`,
+      min: `分鐘前`,
+      hour: `小時前`,
+      day: `天前`,
     },
     root : `/blog/`,
     tag_plugins: {
