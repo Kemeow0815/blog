@@ -1,0 +1,32 @@
+.l_body[layout="timetable"] {
+  display: block;
+}
+.l_body[layout="timetable"] .l_main.timetable-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .l_body[layout="timetable"] .l_main.timetable-main {
+    padding: 10px;
+  }
+}
+.l_body[layout="timetable"] .l_left,
+.l_body[layout="timetable"] .l_right {
+  display: none;
+}
+.timetable-page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.timetable-page-title h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-p1);
+}
+.timetable-page-title .subtitle {
+  color: var(--text-p2);
+  font-size: 0.9rem;
+}

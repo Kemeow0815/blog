@@ -1,0 +1,132 @@
+.timetable-widget-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.timetable-widget {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: $boxshadow-card;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--block-border);
+}
+.timetable-widget:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.timetable-widget-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  color: var(--text-p3);
+  font-size: 0.875rem;
+}
+.timetable-widget-loading .loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--block-border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: timetable-spin 0.8s linear infinite;
+}
+.timetable-widget-error {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: var(--text-p3);
+  font-size: 0.875rem;
+}
+.timetable-widget-header {
+  margin-bottom: 0.75rem;
+}
+.timetable-widget-status {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-p1);
+}
+.timetable-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+.timetable-info-row:last-child {
+  margin-bottom: 0;
+}
+.timetable-label {
+  color: var(--text-p3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.timetable-value {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+  align-items: baseline;
+}
+.timetable-course-name {
+  font-weight: 600;
+  color: #f59e0b;
+}
+.timetable-room {
+  color: var(--text-p2);
+}
+.timetable-countdown {
+  font-weight: 600;
+  color: #0ea5e9;
+}
+[data-theme="dark"] .timetable-widget {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] .timetable-widget:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+[data-theme="dark"] .timetable-course-name {
+  color: #fbbf24;
+}
+[data-theme="dark"] .timetable-countdown {
+  color: #38bdf8;
+}
+@media screen and (max-width: 768px) {
+  .timetable-widget {
+    padding: 0.875rem;
+  }
+  .timetable-widget .timetable-widget-header {
+    margin-bottom: 0.625rem;
+  }
+  .timetable-widget .timetable-widget-status {
+    font-size: 1rem;
+  }
+  .timetable-widget .timetable-info-row {
+    font-size: 0.8125rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .timetable-widget {
+    padding: 0.75rem;
+  }
+}
+@-moz-keyframes timetable-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes timetable-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes timetable-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes timetable-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
