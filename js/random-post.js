@@ -4,7 +4,7 @@
   'use strict';
 
   // 文章列表
-  var posts = ["posts/248a939e.html","posts/ed02a91f.html","posts/5d63715b.html","posts/4a17b156.html","posts/6973b1b8.html","posts/2ad1033e.html","posts/bbad5266.html","posts/794688f8.html","posts/1a11017e.html"];
+  var posts = ["posts/248a939e.html","posts/4a17b156.html","posts/5d63715b.html","posts/6973b1b8.html","posts/bbad5266.html","posts/794688f8.html","posts/2ad1033e.html","posts/1a11017e.html","posts/ai-summary-guide.html","posts/ed02a91f.html"];
 
   // 随机跳转函数
   function toRandomPost() {
